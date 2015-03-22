@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/var/www/html/zend_project/application/forms/Forum.php</file>
+            <file>file:/var/www/html/zend_project/application/controllers/ForumsController.php</file>
+            <file>file:/var/www/html/zend_project/application/models/Forums.php</file>
+            <file>file:/var/www/html/zend_project/application/views/scripts/forums/list.phtml</file>
+            <file>file:/var/www/html/zend_project/application/models/Threads.php</file>
+            <file>file:/var/www/html/zend_project/application/controllers/ThreadsController.php</file>
+            <file>file:/var/www/html/zend_project/application/views/scripts/categories/main.phtml</file>
+            <file>file:/var/www/html/zend_project/application/models/Categories.php</file>
+            <file>file:/var/www/html/zend_project/application/views/scripts/categories/list.phtml</file>
+            <file>file:/var/www/html/zend_project/application/views/scripts/threads/add-thread.phtml</file>
+            <file>file:/var/www/html/zend_project/application/controllers/RepliesController.php</file>
+            <file>file:/var/www/html/zend_project/application/forms/Reply.php</file>
+            <file>file:/var/www/html/zend_project/application/models/Replies.php</file>
+            <file>file:/var/www/html/zend_project/application/views/scripts/threads/view-thread.phtml</file>
+            <file>file:/var/www/html/zend_project/application/views/scripts/threads/list.phtml</file>
+        </group>
+    </open-files>
+</project-private>

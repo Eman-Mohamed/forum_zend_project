@@ -1,0 +1,87 @@
+<br /><br />
+<div id="view-content">
+	<p>View script for controller <b>threads</b> and script/action name <b>list</b></p>
+</div>
+<div class="container-fluid">
+<table class="table table-hover">
+       <?php
+       $sticky=-1;
+ for($i = 0; $i<count($this->threads); $i++){
+     if($this->threads[$i]['is_sticky'] == 1)
+     {
+         $sticky=$i;?>
+    <tr>
+        <td  class="info" width='120px' height='60px'>
+            <img src="../threads_images/<?php echo $this->threads[$i]['image'];?>" class="img-circle"  width="100" height="50px"/>
+            
+        </td>
+    <td class="danger">
+<a href="<?php echo $this->baseUrl()?>/threads/view-thread/id/<?php echo $this->threads[$i]['id'];?>" class="text-danger"> <?php echo $this->threads[$i]["title"];?></a>
+    </td>
+
+ <td class="success" width='150px'>    
+<a href="<?php echo $this->baseUrl()?>/threads/edit/id/<?php echo $this->threads[$i]['id'];?>" class="btn btn-success btn-lg" > Edit </a>
+
+</td>
+
+        <td class="warning" width='150px' >    
+<a href="<?php echo $this->baseUrl()?>/threads/delete/id/<?php echo $this->threads[$i]['id'];?>/forumId/<?php echo $this->threads[$i]['forum_id'];?>" class="btn btn-danger btn-lg" > Delete </a>
+
+</td>
+
+        <td class="active" width='150px' >    
+<a href="<?php echo $this->baseUrl()?>/threads/lock/id/<?php echo $this->threads[$i]['id'];?>/lock/<?php echo $this->threads[$i]['is_locked'];?>/formId/<?php echo $this->threads[$i]['forum_id']?>" class="btn btn-warning btn-lg" > <?php if( $this->threads[$i]['is_locked'] == 0) echo "Lock"; else{ echo "Unlock";}?> </a>
+
+</td>
+
+       <td class="active" width='150px' >    
+<a href="<?php echo $this->baseUrl()?>/threads/sticky/id/<?php echo $this->threads[$i]['id'];?> /formId/<?php echo $this->threads[$i]['forum_id']?>" class="btn btn-warning btn-lg" > <?php if( $this->threads[$i]['is_sticky'] == 0) echo "Not Sticky"; else{ echo "Sticky";}?> </a>
+
+</td>
+    </tr>
+    
+    <?php
+     }
+ }
+  ?> 
+    
+    <?php
+for($i = 0; $i<count($this->threads); $i++){
+    if($i !=$sticky){
+     
+?>
+    <tr>
+        <td  class="info" width='120px' height='60px'>
+            <img src="../threads_images/<?php echo $this->threads[$i]['image'];?>" class="img-circle"  width="100" height="50px"/>
+            
+        </td>
+    <td class="danger">
+<a href="<?php echo $this->baseUrl()?>/threads/view-thread/id/<?php echo $this->threads[$i]['id'];?>" class="text-danger"> <?php echo $this->threads[$i]["title"];?></a>
+    </td>
+
+ <td class="success" width='150px'>    
+<a href="<?php echo $this->baseUrl()?>/threads/edit/id/<?php echo $this->threads[$i]['id'];?>" class="btn btn-success btn-lg" > Edit </a>
+
+</td>
+
+        <td class="warning" width='150px' >    
+<a href="<?php echo $this->baseUrl()?>/threads/delete/id/<?php echo $this->threads[$i]['id'];?>/forumId/<?php echo $this->threads[$i]['forum_id'];?>" class="btn btn-danger btn-lg" > Delete </a>
+
+</td>
+
+        <td class="active" width='150px' >    
+<a href="<?php echo $this->baseUrl()?>/threads/lock/id/<?php echo $this->threads[$i]['id'];?>/lock/<?php echo $this->threads[$i]['is_locked']?>/formId/<?php echo $this->threads[$i]['forum_id']?>" class="btn btn-warning btn-lg" > <?php if( $this->threads[$i]['is_locked'] == 0) echo "Lock"; else{ echo "Unlock";}?> </a>
+
+</td>
+
+       <td class="active" width='150px' >    
+<a href="<?php echo $this->baseUrl()?>/threads/sticky/id/<?php echo $this->threads[$i]['id'];?> /formId/<?php echo $this->threads[$i]['forum_id']?>" class="btn btn-warning btn-lg" > <?php if( $this->threads[$i]['is_sticky'] == 0) echo "Not Sticky"; else{ echo "Sticky";}?> </a>
+
+</td>
+    </tr>
+<?php
+
+}}
+?>
+</table>
+</div>

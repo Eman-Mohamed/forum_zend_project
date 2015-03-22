@@ -1,0 +1,66 @@
+<html>
+    <p> your registeration was sucssifully please check your email first then login in</p>
+    <header>
+        <style>
+            .error
+            {
+                color: red;
+            }
+
+            .col-lg-12{
+                background-image: url("../images/products/2.jpg");
+               	background-size: cover;
+                background-repeat: no-repeat;    
+                height: 800px;
+
+
+
+            }
+            .jumbotron
+            {
+                width: 600px;
+                margin-left: 500px;
+                margin-top: 100px;
+                background-color:rgba(102,51,0,0.7);
+            }
+
+
+        </style>
+
+    </header>
+    <body>
+        <div class="col-lg-12"> 
+            <div class="container">
+
+
+                <div class="header">
+                    <div class="jumbotron">
+
+                        <h1 class="col-md-offset-3"  style="color: white"> fatkat
+                            <br>
+                            <small class="col-md-offset-2 "style="color: white; margin-left: 80px;" > login </small></h1>
+
+                        <div class="form-group-lg"></div>
+
+                        <form  method="post" action="" class="form-horizontal">
+                            <div class="form-group">
+
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <?php
+                                    echo $this->login;
+                                    ?> 
+                                </div>
+                            </div>
+
+                            
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

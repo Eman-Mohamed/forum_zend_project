@@ -1,0 +1,30 @@
+<br /><br />
+<div class="container">
+<div id="view-content">
+    <nav class="navbar navbar-inverse">
+   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">login in</a></li>
+</nav>
+    <div class="jumbotron col-sm-1-offset-1">
+            
+
+    <?php
+    if (isset($this->errorMessage)) {
+
+        echo $this->errorMessage;
+    }
+    ?>
+    <?php
+    echo $this->register;
+    ?>
+    </div>
+    
+    
+
+
+
+</div>
+
+</div>

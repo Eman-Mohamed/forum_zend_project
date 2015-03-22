@@ -1,0 +1,72 @@
+<br /><br />
+<div id="view-content">
+	<p>View script for controller <b>categories</b> and script/action name <b>main</b></p>
+</div>
+
+<div class="container">
+
+       <?php
+       for($j = 0; $j<count($this->categories); $j++){ ?>
+    <table class="table table-hover">
+    <tr>
+       
+        <td  class="info" width='120px' height='60px'>
+            <img src="../category_images/<?php echo $this->categories[$j]['image'];?>" class="img-circle"  width="100" height="50px"/>
+            
+        </td>
+        
+        <td  class="danger" >
+            <a href="<?php echo $this->baseUrl()?>/forums/list/id/<?php echo $this->categories[$j]['id'];?>" > <?php echo $this->categories[$j]["name"];?> </a>
+            
+        </td>
+        
+        
+ <td class="success" width='150px'>    
+<a href="<?php echo $this->baseUrl()?>/categories/edit/id/<?php echo $this->categories[$j]['id'];?>/e/-1" class="btn btn-success btn-lg" > Edit </a>
+
+</td>
+
+        <td class="warning" width='150px' >    
+<a href="<?php echo $this->baseUrl()?>/categories/delete/id/<?php echo $this->categories[$j]['id'];?>/catImg/<?php echo $this->categories[$j]['image'];?>/d/-1" class="btn btn-danger btn-lg" > Delete </a>
+
+</td>
+
+
+    </tr>
+        <?php
+       
+for($i = 0; $i<count($this->forums); $i++){
+    if($this->forums[$i]['cat_id'] == $this->categories[$j]['id']) {
+?>
+    <tr>
+        <td  class="info" width='120px' height='60px'>
+            <img src="../forum_images/<?php echo $this->forums[$i]['image'];?>" class="img-circle"  width="100" height="50px"/>
+            
+        </td>
+    <td class="danger">
+<a href="<?php echo $this->baseUrl()?>/threads/list/id/<?php echo $this->forums[$i]['id'];?>" class="text-danger"> <?php echo $this->forums[$i]["name"];?></a>
+    </td>
+
+ <td class="success" width='150px'>    
+<a href="<?php echo $this->baseUrl()?>/categories/editforum/id/<?php echo $this->forums[$i]['id'];?>" class="btn btn-success btn-lg" > Edit </a>
+
+</td>
+
+        <td class="warning" width='150px' >    
+<a href="<?php echo $this->baseUrl()?>/categories/deleteforum/id/<?php echo $this->forums[$i]['id'];?>/img/<?php echo $this->forums[$i]['image'];?>" class="btn btn-danger btn-lg" > Delete </a>
+
+</td>
+
+        <td class="active" width='150px' >    
+<a href="<?php echo $this->baseUrl()?>/categories/lockforum/id/<?php echo $this->forums[$i]['id'];?>/lock/<?php echo $this->forums[$i]['is_locked'];?>" class="btn btn-warning btn-lg" > <?php if( $this->forums[$i]['is_locked'] == 0) echo "Lock"; else{ echo "Unlock";}?> </a>
+
+</td>
+    </tr>
+<?php
+
+}}
+      echo '</table> <br> <br>';
+}
+?>
+
+</div>
